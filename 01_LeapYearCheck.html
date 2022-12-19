@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Leap Year.</title>
+</head>
+
+<body>
+    <h3>Welcome To Leap year Checking : </h3>
+    <form action="">
+        <label for="">Enter your favourite year : </label>
+        <input type="date" id="checkLeapYear" name="leapyear">
+    </form>
+    <button onclick="checkLeapYear()">
+        Check Leap year
+    </button>
+    <script>
+        userEnterYear = document.getElementById('checkLeapYear');
+        checkLeapYear = (userEnterYear) => {
+            try {
+                if ((userEnterYear % 4 == 0) && (userEnterYear % 100 != 0) || userEnterYear % 400 == 0) {
+                    document.write(`your entered year ${userEnterYear} is Leap year `);
+                    document.getElementById('leapYear').innerHTML = "Leap Year"
+                    exitFunc : {
+                        console.log("Function is exited.");
+                        break exitFunc;
+                    }
+                    exitFunc();
+                } else {
+                    document.write(`your entered year is ${userEnterYear} is not a leap year `);
+                }
+            } catch (error) {
+                console.log("Undefined Error....!");
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

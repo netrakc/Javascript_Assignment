@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion Of The Temperature.</title>
+</head>
+<body>
+    <script>
+        userEnterTemperature = prompt("Enter Tempearture.");
+        centigradeToFahrenheit = (userEnterTemperature) =>{
+            const centToFahr = userEnterTemperature * 9 / 5 + 32;
+            document.write(`Centigrade to fahreheint is : ${centToFahr}`);
+        }
+        fahrenheitToCentigrade = (userEnterTemperature) => {
+            const farhToCent = (userEnterTemperature - 32) * 5 / 9;
+            document.write(`Fahrenheit to centigrade is : ${farhToCent}`);
+        }
+        class TemperatureConversion{
+            constructor(userEnterTemperature){
+                this.userEnterTemperature = userEnterTemperature;
+            }
+            TemperatureConversion = {
+                "CentToFah" : centigradeToFahrenheit(),
+                "FahToCent" : fahrenheitToCentigrade(),
+            }  
+        }
+        obj = TemperatureConversion(userEnterTemperature)
+        document.write("Conversion of centigrade to fahreheint is : "+obj.TemperatureConversion[CentToFah]);
+        document.write("Conversion of fahrenheit to centigrade is : "+obj.TemperatureConversion[FahToCent]);
+
+    </script>
+</body>
+</html>
