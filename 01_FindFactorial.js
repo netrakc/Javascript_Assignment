@@ -25,8 +25,3 @@ findFactorialNum = (factNum) => {
     }
 }
 console.log("The factorial of the given number is : ",findFactorialNum(factNum));
-
-
-
-
-
